@@ -1,0 +1,117 @@
+.rh-benefits-list {
+  background-color: #f0f7ff;
+  padding: 4.8rem 0 4rem;
+
+  @include md-up {
+    padding: 6rem 0 5rem;
+  }
+
+  @include lg-up {
+    border-bottom-width: 1.6rem;
+    padding: 7.4rem 0 6rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+
+    @include lg-up {
+      align-items: center;
+      text-align: center;
+      gap: 2.4rem;
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--Black);
+    margin: 0;
+    max-width: 70rem;
+
+    @include md-up {
+      font-size: 3.6rem;
+    }
+
+    @include lg-up {
+      font-size: 4rem;
+      line-height: 1.25;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--Primary);
+    margin: 0;
+    font-weight: 400;
+
+    @include md-up {
+      font-size: 1.6rem;
+    }
+
+    @include lg-up {
+      font-size: 2rem;
+      line-height: 1.15;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 1.2rem 0 0;
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    max-width: 64rem;
+
+
+    @include lg-up {
+      margin-top: 1.6rem;
+      gap: 1rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    color: var(--Primary);
+
+    @include md-up {
+      font-size: 1.6rem;
+      line-height: 3rem;
+    }
+
+    @include lg-up {
+      font-size: 2.4rem;
+      line-height: 4.4rem;
+    }
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0.4rem;
+    flex-shrink: 0;
+    display: inline-block;
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.6297 0.5L6.9102 13.0265C6.75649 13.3028 6.51494 13.4871 6.27339 13.5178C6.00988 13.5178 5.76833 13.4257 5.59266 13.1493L3.83594 10.6932' stroke='%239E5D37' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.50839 13.2111C3.35468 13.4567 3.11313 13.5796 2.89354 13.5796C2.65199 13.5796 2.4324 13.4567 2.25672 13.2111L0.5 10.7856' stroke='%239E5D37' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.2011 0.562256L5.41406 9.46591' stroke='%239E5D37' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include lg-up {
+      margin-top: 1.2rem;
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+}

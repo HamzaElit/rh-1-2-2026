@@ -1,0 +1,152 @@
+.rn-feature-split {
+  background-color: var(--Secondary-3);
+  padding: 4rem 0;
+
+  @include md-up {
+    padding: 6rem 0;
+  }
+
+  @include lg-up {
+    padding: 9rem 0;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "content"
+      "card"
+      "cta";
+    gap: 2.4rem;
+    align-items: start;
+
+    @include lg-up {
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "content card"
+        "cta card";
+      column-gap: 6rem;
+      row-gap: 5rem;
+    }
+  }
+
+  &__content {
+    grid-area: content;
+    @include lg-up {
+      align-self: flex-end;
+    }
+  }
+
+  &__title {
+    font-size: var(--h2_font-size);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--Black);
+    margin: 0 0 1.6rem;
+  }
+
+  &__title-text {
+    display: block;
+  }
+
+  &__title-text--mobile {
+    display: block;
+
+    @include lg-up {
+      display: none;
+    }
+  }
+
+  &__title-text--desktop {
+    display: none;
+
+    @include lg-up {
+      display: block;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: var(--Secondary-2);
+    margin: 0;
+
+    @include md-up {
+      font-size: 2rem;
+    }
+  }
+
+  &__card {
+    grid-area: card;
+    background-color: var(--Secondary-2);
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 2.4rem 2rem 2.6rem;
+    display: grid;
+    gap: 1.4rem;
+
+    @include md-up {
+      padding: 2.6rem 2.4rem 2.8rem;
+    }
+
+    @include lg-up {
+      padding: 2.8rem 3rem 3rem;
+      gap: 1.6rem;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    color: var(--White);
+    font-size: 1.5rem;
+    line-height: 1.5;
+
+    @include lg-up {
+      font-size: 2rem;
+    }
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0.2rem;
+    @include lg-up {
+        margin-top: 0.55rem;
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+    flex-shrink: 0;
+    display: inline-block;
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.6297 0.5L6.9102 13.0265C6.75649 13.3028 6.51494 13.4871 6.27339 13.5178C6.00988 13.5178 5.76833 13.4257 5.59266 13.1493L3.83594 10.6932' stroke='%23FFBD86' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.50839 13.2111C3.35468 13.4567 3.11313 13.5796 2.89354 13.5796C2.65199 13.5796 2.4324 13.4567 2.25672 13.2111L0.5 10.7856' stroke='%23FFBD86' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.2011 0.562256L5.41406 9.46591' stroke='%23FFBD86' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__cta {
+    grid-area: cta;
+
+    .btns-wrp {
+        justify-content: flex-start;
+    }
+  }
+}

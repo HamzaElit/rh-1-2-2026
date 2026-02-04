@@ -1,0 +1,167 @@
+.rn-pricing-comparison {
+  background-color: var(--Secondary-3);
+  padding: 5rem 0;
+  overflow: hidden;
+
+  @include lg-up {
+    padding: 8rem 0;
+  }
+
+  .rn-pricing-comparison__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 95rem;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-areas:
+      "title"
+      "chart"
+      "button";
+
+    @include lg-up {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "title chart"
+        "button chart";
+      gap: 4rem 6rem;
+      align-items: start;
+    }
+  }
+
+  &__title {
+    align-self: flex-end;
+    grid-area: title;
+    color: var(--Primary);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+
+    @include md-up {
+      font-size: 4rem;
+    }
+  }
+
+  &__chart-wrapper {
+    grid-area: chart;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @include lg-up {
+      justify-content: flex-end;
+    }
+  }
+
+  &__chart {
+    width: 100%;
+    max-width: 50rem;
+    height: auto;
+
+    @include lg-up {
+      max-width: 60rem;
+    }
+  }
+
+  .btns-wrp {
+    grid-area: button;
+
+    @include lg-up {
+      justify-content: flex-start;
+    }
+  }
+
+  &__cta-banner {
+    grid-area: cta-banner;
+    background-color: var(--Secondary-2);
+    border-radius: 3.2rem;
+    padding: 2.4rem 2.4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    align-items: center;
+    margin-top: 3.8rem;
+
+    @include lg-up {
+      grid-template-columns: 1fr auto;
+      margin-top: 6rem;
+      padding: 3.6rem 5rem;
+      gap: 4rem;
+    }
+  }
+
+  &__cta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__cta-title {
+    color: var(--Secondary-3);
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+
+    @include lg-up {
+      font-size: 4rem;
+    }
+  }
+
+  &__cta-text {
+    color: var(--Secondary-3);
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin: 0;
+
+    @include lg-up {
+      font-size: 2rem;
+    }
+  }
+
+  &__cta-arrow-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__cta-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Secondary-3);
+    border-radius: 2rem;
+    width: 7.5rem;
+    height: 7.2rem;
+    flex-shrink: 0;
+    color: var(--Secondary-2);
+    transition: transform 0.3s ease;
+
+    @include lg-up {
+      width: 13.4rem;
+      height: 12.9rem;
+      border-radius: 3.2rem;
+      margin: 0;
+    }
+
+    svg {
+      width: 3.2rem;
+      height: auto;
+      transition: transform 0.3s ease;
+
+      path {
+        fill: currentColor;
+      }
+
+      @include lg-up {
+        width: 6rem;
+      }
+    }
+
+    &:hover {
+      svg {
+        transform: translateX(0.6rem);
+      }
+    }
+  }
+}
