@@ -165,3 +165,32 @@
     }
   }
 }
+.rn-pricing-comparison__cta-arrow{
+  animation: shake-left-right 1.2s ease-in-out infinite;
+}
+@keyframes shake-left-right {
+  0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0)
+  }
+
+  25% {
+      -webkit-transform: translateX(5px);
+      transform: translateX(5px)
+  }
+
+  50% {
+      -webkit-transform: translateX(-5px);
+      transform: translateX(-5px)
+  }
+
+  75% {
+      -webkit-transform: translateX(5px);
+      transform: translateX(5px)
+  }
+
+  100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0)
+  }
+}
