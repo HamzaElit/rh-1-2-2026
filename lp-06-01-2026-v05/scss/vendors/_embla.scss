@@ -43,6 +43,7 @@
 
   &.em__twoColumns-02 {
     --slide-size: 80%; // Base mobile size
+
     @include sm-up {
       --slide-size-sm: 40%;
     }
@@ -51,8 +52,10 @@
       --slide-size-lg: 40%;
     }
   }
+
   &.em__twoColumns-03 {
     --slide-size: 80%; // Base mobile size
+
     @include sm-up {
       --slide-size-sm: 60%;
     }
@@ -61,13 +64,22 @@
       --slide-size-lg: 70%;
     }
   }
+
   &.em__threeColumns-01 {
     --slide-size: 60%; // Base mobile size
-      --slide-size-sm: 30%;
-      --slide-size-lg: 18%;
+    --slide-size-sm: 30%;
+    --slide-size-lg: 18%;
   }
+
+  &.em__threeColumns-03 {
+    --slide-size: 80%; // Base mobile size
+    --slide-size-sm: 40%;
+    --slide-size-lg: 33.3333%;
+  }
+
   &.em__threeColumns-02 {
     --slide-size: 80%; // Base mobile size
+
     @include sm-up {
       --slide-size-sm: 40%;
     }
@@ -76,16 +88,19 @@
       --slide-size-lg: 27%;
     }
   }
+
   &.em__sp-5 {
     --slide-spacing: 5px;
     --slide-spacing-sm: 5px;
     --slide-spacing-lg: 5px;
   }
+
   &.em__sp-15 {
     --slide-spacing: 15px;
     --slide-spacing-sm: 15px;
     --slide-spacing-lg: 15px;
   }
+
   &.em__sp-50 {
     --slide-spacing-lg: 50px;
   }
@@ -159,6 +174,7 @@
     background-position: center;
     background-size: 30px;
     transition: 0.3s all ease;
+
     @include lg-up {
       width: 7rem;
       height: 7rem;
@@ -280,9 +296,11 @@
 
 .embla__prev {
   background-image: url("data:image/svg+xml,%3Csvg width='20' height='15' viewBox='0 0 20 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.292892 6.65666C-0.0976315 7.04719 -0.0976314 7.68035 0.292892 8.07088L6.65686 14.4348C7.04738 14.8254 7.68054 14.8254 8.07107 14.4348C8.46159 14.0443 8.46159 13.4111 8.07107 13.0206L2.41421 7.36377L8.07107 1.70692C8.46159 1.31639 8.46159 0.683227 8.07107 0.292702C7.68054 -0.0978219 7.04738 -0.0978219 6.65685 0.292703L0.292892 6.65666ZM20 7.36377L20 6.36377L1 6.36377L1 7.36377L1 8.36377L20 8.36377L20 7.36377Z' fill='%23002989'/%3E%3C/svg%3E%0A");
+
   @include lg-up {
     background-image: url("data:image/svg+xml,%3Csvg width='52' height='24' viewBox='0 0 52 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.477921 10.7992C-0.155593 11.4327 -0.155593 12.4599 0.477921 13.0934L10.8016 23.4171C11.4351 24.0506 12.4623 24.0506 13.0958 23.4171C13.7293 22.7836 13.7293 21.7564 13.0958 21.1229L3.91916 11.9463L13.0958 2.76966C13.7293 2.13615 13.7293 1.10902 13.0958 0.475505C12.4623 -0.158009 11.4351 -0.158009 10.8016 0.475505L0.477921 10.7992ZM51.625 11.9463L51.625 10.3241L1.625 10.3241L1.625 11.9463L1.625 13.5685L51.625 13.5685L51.625 11.9463Z' fill='%23002989'/%3E%3C/svg%3E%0A");
   }
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: 19px; // Mobile size first
@@ -294,9 +312,11 @@
 
 .embla__next {
   background-image: url("data:image/svg+xml,%3Csvg width='20' height='15' viewBox='0 0 20 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.7071 6.65666C20.0976 7.04719 20.0976 7.68035 19.7071 8.07088L13.3431 14.4348C12.9526 14.8254 12.3195 14.8254 11.9289 14.4348C11.5384 14.0443 11.5384 13.4111 11.9289 13.0206L17.5858 7.36377L11.9289 1.70692C11.5384 1.31639 11.5384 0.683227 11.9289 0.292702C12.3195 -0.0978219 12.9526 -0.0978219 13.3431 0.292703L19.7071 6.65666ZM0 7.36377L6.17854e-08 6.36377L19 6.36377L19 7.36377L19 8.36377L-6.17854e-08 8.36377L0 7.36377Z' fill='%23002989'/%3E%3C/svg%3E%0A");
+
   @include lg-up {
     background-image: url("data:image/svg+xml,%3Csvg width='52' height='24' viewBox='0 0 52 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M51.1471 10.7992C51.7806 11.4327 51.7806 12.4599 51.1471 13.0934L40.8234 23.4171C40.1899 24.0506 39.1627 24.0506 38.5292 23.4171C37.8957 22.7836 37.8957 21.7564 38.5292 21.1229L47.7058 11.9463L38.5292 2.76966C37.8957 2.13615 37.8957 1.10902 38.5292 0.475504C39.1627 -0.158009 40.1899 -0.158009 40.8234 0.475505L51.1471 10.7992ZM0 11.9463L1.00229e-07 10.3241L50 10.3241L50 11.9463L50 13.5685L-1.00229e-07 13.5685L0 11.9463Z' fill='%23002989'/%3E%3C/svg%3E%0A");
   }
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: 19px; // Mobile size first
@@ -318,6 +338,7 @@
     white-space: nowrap;
     border-width: 0;
   }
+
   cursor: pointer;
   display: inline-block;
   width: 30px; // Mobile size first
@@ -401,6 +422,46 @@
 
   @include lg-up {
     display: none; // Hide on larger screens
+  }
+
+}
+
+.embla[data-mobile-only="1"] {
+  .embla__buttons {
+    display: block; // Show on mobile by default
+
+    @include lg-up {
+      display: none; // Hide on larger screens
+
+    }
+
+  }
+
+  @include lg-up {
+    .embla__container {
+      .embla__slide {
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+
+  // When Embla is disabled on desktop (active: false), show all slides in a grid
+  @include lg-up {
+    .embla__viewport {
+      overflow: visible;
+    }
+
+    .embla__container {
+      flex-wrap: wrap;
+      margin-left: 0;
+    }
+
+    .embla__slide {
+      padding-left: var(--slide-spacing-lg);
+    }
   }
 }
 

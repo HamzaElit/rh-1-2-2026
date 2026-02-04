@@ -131,19 +131,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (mobile__only == "1") {
         options = {
-          loop: loopValue,
+          loop: false,
           align: alignValue,
           axis,
           slidesToScroll: scrollValue,
           containScroll: "trimSnaps",
           breakpoints: {
             "(min-width: 768px)": {
-              loop: loopValue,
+              loop: true,
               slidesToScroll: slidesToScroll__tab
             },
-            "(min-width: 1280px)": {
-              loop: loopValue,
-              slidesToScroll: slidesToScroll__desk
+            "(min-width: 1024px)": {
+              loop: true,
+              slidesToScroll: slidesToScroll__desk,
+              active: false
             }
           }
         };
@@ -171,8 +172,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const viewportNode = embla__slider.querySelector(".embla__viewport");
-    const prevButtonNode = embla__slider.querySelector(".embla__arrow--prev");
-    const nextButtonNode = embla__slider.querySelector(".embla__arrow--next");
+    const prevButtonNode =
+      embla__slider.querySelector(".embla__arrow--prev") ||
+      embla__slider.querySelector(".embla__prev");
+    const nextButtonNode =
+      embla__slider.querySelector(".embla__arrow--next") ||
+      embla__slider.querySelector(".embla__next");
     const dotsNode = embla__slider.querySelector(".embla__dots");
     const slideNodes = embla__slider.querySelectorAll(".embla__slide");
 
